@@ -1,24 +1,12 @@
 <html>
-    <head>
-        <title >
-            Chunky_RBP Blog
-        </title>
-    </head>
-    <body>
+    <div>
+        <h1><a href="/">Chunky_RBP</a></h1>
+    </div>
+    {%for post in posts%}
         <div>
-            <h1><a href="/">Chunky_RBP</a></h1>
+            <p>published: {{ post.published_date}} </p>
+            <h2><a href=""> {{ post.title }} </a></h2>
+            <p> {{ post.text|linebreaksbr}} </p>
         </div>
-        <div>
-            <p>published: 28.11.2020</p>
-            <h2>
-                <a href="">My first post</a>
-                <p>はじめましてええええ</p>
-            </h2>
-        </div>
-        <div>
-            <p>公開日: 2020/11/28</p>
-            <h2><a href="">2番めの投稿</a></h2>
-            <p>こんにちはあああ</p>
-        </div>
-    </body>
+    {%endfor%}
 </html>
